@@ -1,0 +1,95 @@
+body {
+  background: #777; }
+
+div {
+  background: #168DE2;
+  float: left;
+  height: 50px;
+  margin: 50px;
+  width: 50px; }
+
+.rounded {
+  border: 10px solid #666;
+  border-radius: 10px;
+  position: relative; }
+  .rounded:before {
+    border: 10px solid;
+    border-radius: 20px;
+    bottom: -20px;
+    content: "";
+    display: block;
+    left: -20px;
+    position: absolute;
+    right: -20px;
+    top: -20px; }
+  .rounded:after {
+    border: 10px solid;
+    border-radius: 0px;
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0; }
+  .rounded:before {
+    border-color: #888 #444 #444 #888; }
+  .rounded:after {
+    border-color: #444 #888 #888 #444; }
+
+.vertical {
+  border: 10px solid #666;
+  position: relative; }
+  .vertical:before {
+    border: 10px solid;
+    bottom: -20px;
+    content: "";
+    display: block;
+    left: -20px;
+    position: absolute;
+    right: -20px;
+    top: -20px; }
+  .vertical:after {
+    border: 10px solid;
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0; }
+  .vertical:before {
+    border-color: #888 #444 #222 #444; }
+  .vertical:after {
+    border-color: #222 #444 #888 #444; }
+
+.circle {
+  border: 10px solid #666;
+  border-radius: 50px;
+  position: relative; }
+  .circle:before {
+    border: 10px solid;
+    border-radius: 60px;
+    bottom: -20px;
+    content: "";
+    display: block;
+    left: -20px;
+    position: absolute;
+    right: -20px;
+    top: -20px; }
+  .circle:after {
+    border: 10px solid;
+    border-radius: 40px;
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0; }
+  .circle:before {
+    border-color: #888 #444 #444 #888; }
+  .circle:after {
+    border-color: #444 #888 #888 #444; }
+
+/*# sourceMappingURL=example-border-emboss.css.map */
