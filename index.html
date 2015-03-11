@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Border-emboss by Belyash</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/Belyash/border-emboss">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/Belyash/border-emboss/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/Belyash/border-emboss/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Border-emboss</h1>
+          <p>CSS Embossed Border (SASS mixin)</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/Belyash">Belyash</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h2>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use?</h2>
+
+<ol>
+<li><code>@import "border-emboss";</code></li>
+<li><code>@include border-emboss();</code></li>
+</ol>
+
+<h2>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo</h2>
+
+<p><a href="http://codepen.io/Belyash/pen/JomEEe">Codepen Demo</a></p>
+
+<h2>
+<a id="customize" class="anchor" href="#customize" aria-hidden="true"><span class="octicon octicon-link"></span></a>Customize</h2>
+
+<dl>
+    <dt>$base</dt>
+    <dd>Base color for border.</dd>
+    <dt>$lighter</dt>
+    <dd>Lighter color (patch of reflected light).</dd>
+    <dt>$darker</dt>
+    <dd>Darker color for side with shadow.</dd>
+    <dt>$darkest</dt>
+    <dd>The darkest color for side with shadow, if has been set then the shadow will be emulate as from vertical light(from top to bottom).</dd>
+    <dt>$width</dt>
+    <dd>Width of border (separately for darker, lighter and base color).</dd>
+    <dt>$radius</dt>
+    <dd>Border radius.</dd>
+    <dt>$width2</dt>
+    <dd>Width of outer side of border. If not set then equals $width.</dd>
+    <dt>$width3</dt>
+    <dd>Width of inner side of border. If not set then equals $width.</dd>
+</dl>
+
+<h2>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples</h2>
+
+<pre><code>.default {
+  @include border-emboss(#666, #888, #444);
+}
+.rounded {
+  @include border-emboss(#666, #888, #444, $radius: 10px, $width: 10px);
+}
+.vertical {
+  @include border-emboss(#666, #888, #444, #222, $width: 10px);
+}
+.circle {
+  @include border-emboss(#666, #888, #444, $radius: 50px, $width: 10px);
+}
+</code></pre>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
