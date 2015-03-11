@@ -1,0 +1,49 @@
+@mixin border-emboss ($base: #666, $lighter: #888, $darker: #444, $darkest: null, $width: 1px, $radius: null, $width2: $width, $width3: $width) {
+  $offset: $width + $width2;
+    border: $width solid $base;
+    @if $radius {
+        border-radius: $radius;
+    }
+    position: relative;
+    &:before {
+        border: $width2 solid;
+        @if $radius {
+            border-radius: $radius + $width;
+        }
+        bottom: -$offset;
+        content: "";
+        display: block;
+        left: -$offset;
+        position: absolute;
+        right: -$offset;
+        top: -$offset;
+    }
+    &:after {
+        border: $width3 solid;
+        @if $radius {
+            border-radius: $radius - $width;
+        }
+        bottom: 0;
+        content: "";
+        display: block;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    @if $darkest {
+        &:before {
+            border-color: $lighter $darker $darkest $darker;
+        }
+        &:after {
+            border-color: $darkest $darker $lighter $darker;
+        }
+    } @else {
+        &:before {
+            border-color: $lighter $darker $darker $lighter;
+        }
+        &:after {
+            border-color: $darker $lighter $lighter $darker;
+        }
+    }
+}

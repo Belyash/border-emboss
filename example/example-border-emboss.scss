@@ -1,0 +1,23 @@
+@import "../border-emboss";
+
+body {
+    background: #777;
+}
+
+div {
+    background: #168DE2;
+    float: left;
+    height: 50px;
+    margin: 50px;
+    width: 50px;
+}
+
+.rounded {
+    @include border-emboss(#666, #888, #444, $radius: 10px, $width: 10px);
+}
+.vertical {
+    @include border-emboss(#666, #888, #444, #222, $width: 10px);
+}
+.circle {
+    @include border-emboss(#666, #888, #444, $radius: 50px, $width: 10px);
+}
