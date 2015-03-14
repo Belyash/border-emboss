@@ -1,5 +1,5 @@
 # CSS Embossed Border (SCSS mixin)
-![CSS Border Emboss](border-emboss-2.png)
+![CSS Border Emboss](border-emboss.png)
 
 ## How to use?
 1. <code>@import "border-emboss";</code>
